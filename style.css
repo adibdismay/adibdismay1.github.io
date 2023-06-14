@@ -16,3 +16,89 @@ section {
 #gallery .row > * {
     padding: 0;
 }
+
+/* My anime section */
+.anime-box{
+    position: relative;
+    background-color: #0d6efd;
+    border-radius: 10px;
+    height: 500px;
+    overflow: hidden;
+}
+
+
+.anime-box::before {
+    content: 'MY';
+    position: absolute;
+    color: #fff;
+    font-size: 6em;
+    font-weight: bold;
+    font-style: italic;
+    top: 30px;
+    left: -100px;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.anime-box:hover::before {
+    left: 50%;
+    transform: translate(-50%, 0);
+    opacity: 0.2;
+}
+
+.anime-box::after {
+    content: 'character';
+    position: absolute;
+    color: #fff;
+    font-size: 4.3em;
+    font-weight: bold;
+    font-style: italic;
+    top: 350px;
+    left: 450px;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.anime-box:hover::after {
+    left: 50%;
+    transform:translate(-50%, 0);
+    opacity: 0.2;
+}
+
+.character-name {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    font-size: 2em;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.anime-box:hover .character-name {
+    top: 20px;
+    opacity: 1;
+}
+.anime-detail-button {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform:translate(-50%, 0);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.anime-box:hover .anime-detail-button {
+    opacity: 1;
+    bottom: 20px;
+}
+
+.anime-img {
+    position: absolute;
+    bottom: 52%;
+    left: 50%;
+    transform:translate(-50%, 52%);
+    max-width: 350px;
+}
+
