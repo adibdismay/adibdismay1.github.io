@@ -23,27 +23,27 @@ section {
     background-color: #0d6efd;
     border-radius: 10px;
     height: 500px;
-    overflow: hidden;
+    transform-style: preserve-3d;
 }
 
 
 .anime-box::before {
-    content: 'MY';
+    content: 'Anime';
     position: absolute;
     color: #fff;
-    font-size: 6em;
+    font-size: 5em;
     font-weight: bold;
     font-style: italic;
     top: 30px;
-    left: -100px;
+    left: 50%;
+    transform: translate(-50%, 0);
     opacity: 0;
     transition: 0.5s;
 }
 
 .anime-box:hover::before {
-    left: 50%;
-    transform: translate(-50%, 0);
     opacity: 0.2;
+    
 }
 
 .anime-box::after {
@@ -54,14 +54,13 @@ section {
     font-weight: bold;
     font-style: italic;
     top: 350px;
-    left: 450px;
+    left: 50%;
+    transform:translate(-50%, 0);
     opacity: 0;
     transition: 0.5s;
 }
 
 .anime-box:hover::after {
-    left: 50%;
-    transform:translate(-50%, 0);
     opacity: 0.2;
 }
 
@@ -73,6 +72,7 @@ section {
     text-align: center;
     font-size: 2em;
     opacity: 0;
+    transform: translate3d(0,0,50px);
     transition: 0.5s;
 }
 
@@ -84,7 +84,7 @@ section {
     position: absolute;
     bottom: 0;
     left: 50%;
-    transform:translate(-50%, 0);
+    transform:translate3d(-50%, 0, 100px);
     opacity: 0;
     transition: 0.5s;
 }
@@ -96,9 +96,33 @@ section {
 
 .anime-img {
     position: absolute;
-    bottom: 52%;
+    top: 50%;
     left: 50%;
-    transform:translate(-50%, 52%);
-    max-width: 350px;
+    transform:translate3d(-50%, -50%, 80px );
+    max-width: 300px;
+    transition: 0.5s;
+}
+.anime-img2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate3d(-50%, -50%, 80px );
+    max-width: 500px;
+    transition: 0.5s;
+}
+.anime-img3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate3d(-50%, -50%, 80px );
+    max-width: 400px;
+    transition: 0.5s;
 }
 
+
+
+
+
+.anime-box:hover .anime-img {
+    transform:translate(-50%, -50%, 100px ) rotate(-5deg) scale(1.2);
+}
